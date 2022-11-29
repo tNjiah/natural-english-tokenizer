@@ -1,0 +1,38 @@
+\doxysection{tokenizer.\+py}
+\label{tokenizer_8py_source}\index{scanner/tokenizer.py@{scanner/tokenizer.py}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{import} os}
+\DoxyCodeLine{00002 \textcolor{keyword}{import} re}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{keyword}{class }Tokenizer:}
+\DoxyCodeLine{00005     }
+\DoxyCodeLine{00006     \textcolor{keyword}{def }\_\_init\_\_(self):}
+\DoxyCodeLine{00007         self.\_stmt\_pattern=\textcolor{stringliteral}{'[\(\backslash\)w*\(\backslash\)s]*[\(\backslash\).|\(\backslash\)?|,|;]? ?'}}
+\DoxyCodeLine{00008         self.\_token\_pattern=\textcolor{stringliteral}{'\(\backslash\)w*|\(\backslash\)s*|[\(\backslash\).|\(\backslash\)?|,|;]'}}
+\DoxyCodeLine{00009         self.\_statements=[]}
+\DoxyCodeLine{00010         self.\_tokens=[]}
+\DoxyCodeLine{00011     }
+\DoxyCodeLine{00012     \textcolor{keyword}{def }get\_statements(self, text) -\/> list:}
+\DoxyCodeLine{00013         regex = re.compile(self.\_stmt\_pattern)}
+\DoxyCodeLine{00014         self.\_statements = regex.findall(text)}
+\DoxyCodeLine{00015         \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.\_statements:}
+\DoxyCodeLine{00016             \textcolor{keywordflow}{if} (len(s)==0): self.\_statements.remove(s) }
+\DoxyCodeLine{00017         \textcolor{keywordflow}{return} self.\_statements}
+\DoxyCodeLine{00018         }
+\DoxyCodeLine{00019     \textcolor{keyword}{def }get\_tokens(self, text) -\/> list:}
+\DoxyCodeLine{00020         regex = re.compile(self.\_token\_pattern)}
+\DoxyCodeLine{00021         self.\_tokens= regex.findall(text)}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{for} t \textcolor{keywordflow}{in} self.\_tokens:}
+\DoxyCodeLine{00023             \textcolor{keywordflow}{if} (len(t)==0): self.\_tokens.remove(t) }
+\DoxyCodeLine{00024         \textcolor{keywordflow}{return} self.\_tokens}
+\DoxyCodeLine{00025     }
+\DoxyCodeLine{00026     \textcolor{keyword}{def }\_\_str\_\_(self) -\/> str:}
+\DoxyCodeLine{00027         ret=\textcolor{stringliteral}{''}}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.\_statements:}
+\DoxyCodeLine{00029             ret += f\textcolor{stringliteral}{"{}statement -\/> \{s\} (length = \{len(s)\})\(\backslash\)n"{}}}
+\DoxyCodeLine{00030         \textcolor{keywordflow}{for} t \textcolor{keywordflow}{in} self.\_tokens:}
+\DoxyCodeLine{00031                 ret += f\textcolor{stringliteral}{"{}token -\/> \{t\} (length = \{len(t)\})\(\backslash\)n"{}}}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{return} ret}
+
+\end{DoxyCode}

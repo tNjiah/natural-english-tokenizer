@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacestatement" xml:lang="en-US">
+<title>statement Namespace Reference</title>
+<indexterm><primary>statement</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classstatement_1_1statement__tokenizer">statement_tokenizer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacestatement_1aae039e30a0f2e957c0002c4476a25a1c">data</link> = <link linkend="_classstatement_1_1statement__tokenizer">statement_tokenizer</link>()</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacestatement_1abbde4347da1448fcb9fb26276cee0f03">text</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacestatement_1aae039e30a0f2e957c0002c4476a25a1c"/><section>
+    <title>data</title>
+<indexterm><primary>data</primary><secondary>statement</secondary></indexterm>
+<indexterm><primary>statement</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>statement.data = <link linkend="_classstatement_1_1statement__tokenizer">statement_tokenizer</link>()</computeroutput></para><para>
+Definition at line <link linkend="_statement_8py_source_1l00059">59</link> of file <link linkend="_statement_8py_source">statement.py</link>.</para>
+</section>
+<anchor xml:id="_namespacestatement_1abbde4347da1448fcb9fb26276cee0f03"/><section>
+    <title>text</title>
+<indexterm><primary>text</primary><secondary>statement</secondary></indexterm>
+<indexterm><primary>statement</primary><secondary>text</secondary></indexterm>
+<para><computeroutput>string statement.text</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">00001 =&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;&#32;Living&#32;without&#32;computers&#32;today&#32;is&#32;close&#32;to&#32;an&#32;impossibility?</emphasis>
+00002 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;As&#32;our&#32;reliance&#32;on&#32;computers&#32;</emphasis><emphasis role="keywordflow">and</emphasis>&#32;computer-controlled&#32;technologies&#32;grows&#32;the&#32;computer&#32;has&#32;evolved&#32;<emphasis role="keyword">from</emphasis>&#32;a&#32;luxury&#32;item&#32;to&#32;a&#32;necessity.<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="_statement_8py_source_1l00060">60</link> of file <link linkend="_statement_8py_source">statement.py</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,15 @@
+\doxysection{main.\+py}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{\#!/usr/bin/python}}
+\DoxyCodeLine{00002 \textcolor{keyword}{from} scanner.tokenizer \textcolor{keyword}{import} Tokenizer}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{00005     t = Tokenizer()}
+\DoxyCodeLine{00006     text = \textcolor{stringliteral}{'This is a test designed to verify the behaviour\(\backslash\)}}
+\DoxyCodeLine{00007 \textcolor{stringliteral}{        of the tokenizer. If it succeeds, we will move to the design of a file scanner.'}}
+\DoxyCodeLine{00008     t.get\_statements(text)}
+\DoxyCodeLine{00009     t.get\_tokens(text)}
+\DoxyCodeLine{00010     print(t) }
+
+\end{DoxyCode}

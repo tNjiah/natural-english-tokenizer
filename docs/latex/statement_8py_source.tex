@@ -1,0 +1,71 @@
+\doxysection{statement.\+py}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{keyword}{import} re}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{class }statement\_tokenizer:}
+\DoxyCodeLine{00007     \textcolor{keyword}{def }\_\_init\_\_(self):}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009         self.\_pattern = \textcolor{stringliteral}{r"{}[A-\/Z]+[a-\/z]*\(\backslash\)s\(\backslash\)."{}}}
+\DoxyCodeLine{00010         self.\_sentence\_pattern = \textcolor{stringliteral}{r'([A-\/Z][\string^\(\backslash\).!?]*[\(\backslash\).!?])'}}
+\DoxyCodeLine{00011         self.\_word\_pattern = \textcolor{stringliteral}{r'\(\backslash\)w+'}}
+\DoxyCodeLine{00012         self.\_regex = re.compile(self.\_sentence\_pattern)}
+\DoxyCodeLine{00013         self.\_tokens = []}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015     \textcolor{keyword}{def }get\_tokens(self, text) -\/> list:}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017         self.\_tokens = self.peformSentenceSplit(text)}
+\DoxyCodeLine{00018         \textcolor{keywordflow}{return} self.\_tokens}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020     \textcolor{keyword}{def }\_\_str\_\_(self) -\/> str:}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022         \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.\_tokens:}
+\DoxyCodeLine{00023             print(f\textcolor{stringliteral}{"{}statement -\/> \{s\}"{}})}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     \textcolor{keyword}{def }\_\_repr\_\_(self) -\/> str:}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027         \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} self.\_tokens:}
+\DoxyCodeLine{00028             print(f\textcolor{stringliteral}{"{}statement -\/> \{s\}"{}})}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030     \textcolor{keyword}{def }peformSentenceSplit(self, text):}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032         formatter = re.compile(self.\_sentence\_pattern, re.M)}
+\DoxyCodeLine{00033         \textcolor{keywordflow}{return} formatter.findall(text)}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     \textcolor{keyword}{def }performWordSplit(self, text):}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037         formatter = re.compile(self.\_word\_pattern, re.M)}
+\DoxyCodeLine{00038         \textcolor{keywordflow}{return} formatter.findall(text)}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     \textcolor{keyword}{def }getAllTokens(self, text):}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042         textData = self.retainAllTokens(text)}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{return} textData.split()}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keyword}{def }retainAllTokens(self, text):}
+\DoxyCodeLine{00046      }
+\DoxyCodeLine{00047         new\_text = \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00048         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(text)):}
+\DoxyCodeLine{00049             \textcolor{keywordflow}{if} re.match(\textcolor{stringliteral}{r'\(\backslash\).|,|\(\backslash\)?|\(\backslash\)'|\(\backslash\))|\(\backslash\)\}|\(\backslash\)]|\(\backslash\):|\(\backslash\);'}, text[i]):}
+\DoxyCodeLine{00050                 new\_text = new\_text+\textcolor{stringliteral}{"{} "{}}+text[i]}
+\DoxyCodeLine{00051             \textcolor{keywordflow}{elif} re.match(\textcolor{stringliteral}{r'\(\backslash\)(|\(\backslash\)\{|\(\backslash\)[|\(\backslash\)s'}, text[i]):}
+\DoxyCodeLine{00052                 new\_text = new\_text+text[i]+\textcolor{stringliteral}{"{} "{}}}
+\DoxyCodeLine{00053             \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00054                 new\_text = new\_text+text[i]}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{return} new\_text}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{00059     data = statement\_tokenizer()}
+\DoxyCodeLine{00060     text = \textcolor{stringliteral}{"{}"{}"{} Living without computers today is close to an impossibility?}}
+\DoxyCodeLine{00061 \textcolor{stringliteral}{      As our reliance on computers }\textcolor{keywordflow}{and} computer-\/controlled technologies grows the computer has evolved \textcolor{keyword}{from} a luxury item to a necessity.\textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00062 \textcolor{stringliteral}{    }\textcolor{comment}{\# checker = data.get\_tokens(text)}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064     \textcolor{comment}{\# for i in checker:}}
+\DoxyCodeLine{00065     \textcolor{comment}{\#     print(data.performWordSplit(i))}}
+\DoxyCodeLine{00066     print(data.getAllTokens(text.strip()))}
+
+\end{DoxyCode}

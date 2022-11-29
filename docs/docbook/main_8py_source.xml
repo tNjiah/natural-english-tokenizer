@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8py_source" xml:lang="en-US">
+<title>main.py</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_main_8py_source_1l00001"/><link linkend="_namespacemain">00001</link> <emphasis role="comment">#!/usr/bin/python</emphasis>
+<anchor xml:id="_main_8py_source_1l00002"/>00002 <emphasis role="keyword">from</emphasis>&#32;scanner.tokenizer&#32;<emphasis role="keyword">import</emphasis>&#32;Tokenizer
+<anchor xml:id="_main_8py_source_1l00003"/>00003 
+<anchor xml:id="_main_8py_source_1l00004"/>00004 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
+<anchor xml:id="_main_8py_source_1l00005"/><link linkend="_namespacemain_1a96721b19cffcb75684862f7848d69177">00005</link> &#32;&#32;&#32;&#32;t&#32;=&#32;Tokenizer()
+<anchor xml:id="_main_8py_source_1l00006"/><link linkend="_namespacemain_1ae0880af0d2974f53498995895e5e2402">00006</link> &#32;&#32;&#32;&#32;text&#32;=&#32;<emphasis role="stringliteral">&apos;This&#32;is&#32;a&#32;test&#32;designed&#32;to&#32;verify&#32;the&#32;behaviour\</emphasis>
+<anchor xml:id="_main_8py_source_1l00007"/>00007 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;of&#32;the&#32;tokenizer.&#32;If&#32;it&#32;succeeds,&#32;we&#32;will&#32;move&#32;to&#32;the&#32;design&#32;of&#32;a&#32;file&#32;scanner.&apos;</emphasis>
+<anchor xml:id="_main_8py_source_1l00008"/>00008 &#32;&#32;&#32;&#32;t.get_statements(text)
+<anchor xml:id="_main_8py_source_1l00009"/>00009 &#32;&#32;&#32;&#32;t.get_tokens(text)
+<anchor xml:id="_main_8py_source_1l00010"/>00010 &#32;&#32;&#32;&#32;print(t)&#32;
+</programlisting></section>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_statement_8py" xml:lang="en-US">
+<title>statement.py File Reference</title>
+<indexterm><primary>statement.py</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classstatement_1_1statement__tokenizer">statement.statement_tokenizer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacestatement">statement</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacestatement_1aae039e30a0f2e957c0002c4476a25a1c">statement.data</link> = statement_tokenizer()</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacestatement_1abbde4347da1448fcb9fb26276cee0f03">statement.text</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_statement_8py_source" xml:lang="en-US">
+<title>statement.py</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_statement_8py_source_1l00001"/><link linkend="_namespacestatement">00001</link> <emphasis role="keyword">import</emphasis>&#32;re
+<anchor xml:id="_statement_8py_source_1l00002"/>00002 
+<anchor xml:id="_statement_8py_source_1l00003"/>00003 
+<anchor xml:id="_statement_8py_source_1l00004"/>00004 
+<anchor xml:id="_statement_8py_source_1l00005"/>00005 
+<anchor xml:id="_statement_8py_source_1l00006"/><link linkend="_classstatement_1_1statement__tokenizer">00006</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classstatement_1_1statement__tokenizer">statement_tokenizer</link>:
+<anchor xml:id="_statement_8py_source_1l00007"/><link linkend="_classstatement_1_1statement__tokenizer_1a539e367f627418c7f0d210d6f1983f2b">00007</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis><link linkend="_classstatement_1_1statement__tokenizer_1a539e367f627418c7f0d210d6f1983f2b">__init__</link>(self):
+<anchor xml:id="_statement_8py_source_1l00008"/>00008 
+<anchor xml:id="_statement_8py_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1ab1964d81535413d9a90d7808efa15f16">_pattern</link>&#32;=&#32;<emphasis role="stringliteral">r&quot;[A-Z]+[a-z]*\s\.&quot;</emphasis>
+<anchor xml:id="_statement_8py_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1a6014c2bbeb9f5d74430d8079c8e79380">_sentence_pattern</link>&#32;=&#32;<emphasis role="stringliteral">r&apos;([A-Z][^\.!?]*[\.!?])&apos;</emphasis>
+<anchor xml:id="_statement_8py_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1a60f9e3d9dd21647a3ecdb891b0820e5d">_word_pattern</link>&#32;=&#32;<emphasis role="stringliteral">r&apos;\w+&apos;</emphasis>
+<anchor xml:id="_statement_8py_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1a9b0e58181d537ac5ad3f9943fb5f59f6">_regex</link>&#32;=&#32;re.compile(self.<link linkend="_classstatement_1_1statement__tokenizer_1a6014c2bbeb9f5d74430d8079c8e79380">_sentence_pattern</link>)
+<anchor xml:id="_statement_8py_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1ae3e4a3059da14fb5b9c8801bc9d96ff8">_tokens</link>&#32;=&#32;[]
+<anchor xml:id="_statement_8py_source_1l00014"/>00014 
+<anchor xml:id="_statement_8py_source_1l00015"/><link linkend="_classstatement_1_1statement__tokenizer_1af31fdead83a1bf102c9c769855cc5965">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis><link linkend="_classstatement_1_1statement__tokenizer_1af31fdead83a1bf102c9c769855cc5965">get_tokens</link>(self,&#32;text)&#32;-&gt;&#32;list:
+<anchor xml:id="_statement_8py_source_1l00016"/>00016 
+<anchor xml:id="_statement_8py_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1ae3e4a3059da14fb5b9c8801bc9d96ff8">_tokens</link>&#32;=&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1a9e8a94c666203e2e3a1e502381afcbec">peformSentenceSplit</link>(text)
+<anchor xml:id="_statement_8py_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1ae3e4a3059da14fb5b9c8801bc9d96ff8">_tokens</link>
+<anchor xml:id="_statement_8py_source_1l00019"/>00019 
+<anchor xml:id="_statement_8py_source_1l00020"/><link linkend="_classstatement_1_1statement__tokenizer_1a9449283c6a72dff3aa0ede6aed4f0186">00020</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis><link linkend="_classstatement_1_1statement__tokenizer_1a9449283c6a72dff3aa0ede6aed4f0186">__str__</link>(self)&#32;-&gt;&#32;str:
+<anchor xml:id="_statement_8py_source_1l00021"/>00021 
+<anchor xml:id="_statement_8py_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;s&#32;<emphasis role="keywordflow">in</emphasis>&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1ae3e4a3059da14fb5b9c8801bc9d96ff8">_tokens</link>:
+<anchor xml:id="_statement_8py_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&quot;statement&#32;-&gt;&#32;{s}&quot;</emphasis>)
+<anchor xml:id="_statement_8py_source_1l00024"/>00024 
+<anchor xml:id="_statement_8py_source_1l00025"/><link linkend="_classstatement_1_1statement__tokenizer_1a85a8d55580c14f82f58e630ba075026d">00025</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis><link linkend="_classstatement_1_1statement__tokenizer_1a85a8d55580c14f82f58e630ba075026d">__repr__</link>(self)&#32;-&gt;&#32;str:
+<anchor xml:id="_statement_8py_source_1l00026"/>00026 
+<anchor xml:id="_statement_8py_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;s&#32;<emphasis role="keywordflow">in</emphasis>&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1ae3e4a3059da14fb5b9c8801bc9d96ff8">_tokens</link>:
+<anchor xml:id="_statement_8py_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&quot;statement&#32;-&gt;&#32;{s}&quot;</emphasis>)
+<anchor xml:id="_statement_8py_source_1l00029"/>00029 
+<anchor xml:id="_statement_8py_source_1l00030"/><link linkend="_classstatement_1_1statement__tokenizer_1a9e8a94c666203e2e3a1e502381afcbec">00030</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis><link linkend="_classstatement_1_1statement__tokenizer_1a9e8a94c666203e2e3a1e502381afcbec">peformSentenceSplit</link>(self,&#32;text):
+<anchor xml:id="_statement_8py_source_1l00031"/>00031 
+<anchor xml:id="_statement_8py_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;formatter&#32;=&#32;re.compile(self.<link linkend="_classstatement_1_1statement__tokenizer_1a6014c2bbeb9f5d74430d8079c8e79380">_sentence_pattern</link>,&#32;re.M)
+<anchor xml:id="_statement_8py_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;formatter.findall(text)
+<anchor xml:id="_statement_8py_source_1l00034"/>00034 
+<anchor xml:id="_statement_8py_source_1l00035"/><link linkend="_classstatement_1_1statement__tokenizer_1a10eb35f9e1c1f020d416d494e0ba5f5b">00035</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis><link linkend="_classstatement_1_1statement__tokenizer_1a10eb35f9e1c1f020d416d494e0ba5f5b">performWordSplit</link>(self,&#32;text):
+<anchor xml:id="_statement_8py_source_1l00036"/>00036 
+<anchor xml:id="_statement_8py_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;formatter&#32;=&#32;re.compile(self.<link linkend="_classstatement_1_1statement__tokenizer_1a60f9e3d9dd21647a3ecdb891b0820e5d">_word_pattern</link>,&#32;re.M)
+<anchor xml:id="_statement_8py_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;formatter.findall(text)
+<anchor xml:id="_statement_8py_source_1l00039"/>00039 
+<anchor xml:id="_statement_8py_source_1l00040"/><link linkend="_classstatement_1_1statement__tokenizer_1a43a95712f250e8ded2b23ef48988bc86">00040</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis><link linkend="_classstatement_1_1statement__tokenizer_1a43a95712f250e8ded2b23ef48988bc86">getAllTokens</link>(self,&#32;text):
+<anchor xml:id="_statement_8py_source_1l00041"/>00041 
+<anchor xml:id="_statement_8py_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textData&#32;=&#32;self.<link linkend="_classstatement_1_1statement__tokenizer_1afa19774ffa56f61147efb0a4e84f88b1">retainAllTokens</link>(text)
+<anchor xml:id="_statement_8py_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;textData.split()
+<anchor xml:id="_statement_8py_source_1l00044"/>00044 
+<anchor xml:id="_statement_8py_source_1l00045"/><link linkend="_classstatement_1_1statement__tokenizer_1afa19774ffa56f61147efb0a4e84f88b1">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis><link linkend="_classstatement_1_1statement__tokenizer_1afa19774ffa56f61147efb0a4e84f88b1">retainAllTokens</link>(self,&#32;text):
+<anchor xml:id="_statement_8py_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_statement_8py_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;new_text&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>
+<anchor xml:id="_statement_8py_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(len(text)):
+<anchor xml:id="_statement_8py_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;re.match(<emphasis role="stringliteral">r&apos;\.|,|\?|\&apos;|\)|\}|\]|\:|\;&apos;</emphasis>,&#32;text[i]):
+<anchor xml:id="_statement_8py_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;new_text&#32;=&#32;new_text+<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>+text[i]
+<anchor xml:id="_statement_8py_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;re.match(<emphasis role="stringliteral">r&apos;\(|\{|\[|\s&apos;</emphasis>,&#32;text[i]):
+<anchor xml:id="_statement_8py_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;new_text&#32;=&#32;new_text+text[i]+<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>
+<anchor xml:id="_statement_8py_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_statement_8py_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;new_text&#32;=&#32;new_text+text[i]
+<anchor xml:id="_statement_8py_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;new_text
+<anchor xml:id="_statement_8py_source_1l00056"/>00056 
+<anchor xml:id="_statement_8py_source_1l00057"/>00057 
+<anchor xml:id="_statement_8py_source_1l00058"/>00058 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
+<anchor xml:id="_statement_8py_source_1l00059"/><link linkend="_namespacestatement_1aae039e30a0f2e957c0002c4476a25a1c">00059</link> &#32;&#32;&#32;&#32;data&#32;=&#32;<link linkend="_classstatement_1_1statement__tokenizer">statement_tokenizer</link>()
+<anchor xml:id="_statement_8py_source_1l00060"/><link linkend="_namespacestatement_1abbde4347da1448fcb9fb26276cee0f03">00060</link> &#32;&#32;&#32;&#32;text&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;&quot;&#32;Living&#32;without&#32;computers&#32;today&#32;is&#32;close&#32;to&#32;an&#32;impossibility?</emphasis>
+<anchor xml:id="_statement_8py_source_1l00061"/>00061 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;As&#32;our&#32;reliance&#32;on&#32;computers&#32;</emphasis><emphasis role="keywordflow">and</emphasis>&#32;computer-controlled&#32;technologies&#32;grows&#32;the&#32;computer&#32;has&#32;evolved&#32;<emphasis role="keyword">from</emphasis>&#32;a&#32;luxury&#32;item&#32;to&#32;a&#32;necessity.<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+<anchor xml:id="_statement_8py_source_1l00062"/>00062 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">#&#32;checker&#32;=&#32;data.get_tokens(text)</emphasis>
+<anchor xml:id="_statement_8py_source_1l00063"/>00063 
+<anchor xml:id="_statement_8py_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;for&#32;i&#32;in&#32;checker:</emphasis>
+<anchor xml:id="_statement_8py_source_1l00065"/>00065 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;&#32;&#32;&#32;&#32;print(data.performWordSplit(i))</emphasis>
+<anchor xml:id="_statement_8py_source_1l00066"/>00066 &#32;&#32;&#32;&#32;print(data.getAllTokens(text.strip()))
+</programlisting></section>

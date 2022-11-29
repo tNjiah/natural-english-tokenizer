@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classtokenizer_1_1_tokenizer" xml:lang="en-US">
+<title>tokenizer.Tokenizer Class Reference</title>
+<indexterm><primary>tokenizer.Tokenizer</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_classtokenizer_1_1_tokenizer_1a3e765827220ff62dcb1eea8ef15aece6">__init__</link> (self)</para>
+</listitem>
+            <listitem><para>list <link linkend="_classtokenizer_1_1_tokenizer_1a660a967b3ee256c372f86f0f133af539">get_statements</link> (self, text)</para>
+</listitem>
+            <listitem><para>list <link linkend="_classtokenizer_1_1_tokenizer_1ad2fb8a15536b87c0cd983e5b9f57f303">get_tokens</link> (self, text)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classtokenizer_1_1_tokenizer_1a6a76430445bf5fe58cd4db2def61c330">__str__</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_tokenizer_8py_source_1l00004">4</link> of file <link linkend="_tokenizer_8py_source">tokenizer.py</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classtokenizer_1_1_tokenizer_1a3e765827220ff62dcb1eea8ef15aece6"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>tokenizer.Tokenizer</secondary></indexterm>
+<indexterm><primary>tokenizer.Tokenizer</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>def tokenizer.Tokenizer.__init__ ( self)</computeroutput></para><para>
+Definition at line <link linkend="_tokenizer_8py_source_1l00006">6</link> of file <link linkend="_tokenizer_8py_source">tokenizer.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classtokenizer_1_1_tokenizer_1a6a76430445bf5fe58cd4db2def61c330"/><section>
+    <title>__str__()</title>
+<indexterm><primary>__str__</primary><secondary>tokenizer.Tokenizer</secondary></indexterm>
+<indexterm><primary>tokenizer.Tokenizer</primary><secondary>__str__</secondary></indexterm>
+<para><computeroutput> str tokenizer.Tokenizer.__str__ ( self)</computeroutput></para><para>
+Definition at line <link linkend="_tokenizer_8py_source_1l00026">26</link> of file <link linkend="_tokenizer_8py_source">tokenizer.py</link>.</para>
+</section>
+<anchor xml:id="_classtokenizer_1_1_tokenizer_1a660a967b3ee256c372f86f0f133af539"/><section>
+    <title>get_statements()</title>
+<indexterm><primary>get_statements</primary><secondary>tokenizer.Tokenizer</secondary></indexterm>
+<indexterm><primary>tokenizer.Tokenizer</primary><secondary>get_statements</secondary></indexterm>
+<para><computeroutput> list tokenizer.Tokenizer.get_statements ( self,  text)</computeroutput></para><para>
+Definition at line <link linkend="_tokenizer_8py_source_1l00012">12</link> of file <link linkend="_tokenizer_8py_source">tokenizer.py</link>.</para>
+</section>
+<anchor xml:id="_classtokenizer_1_1_tokenizer_1ad2fb8a15536b87c0cd983e5b9f57f303"/><section>
+    <title>get_tokens()</title>
+<indexterm><primary>get_tokens</primary><secondary>tokenizer.Tokenizer</secondary></indexterm>
+<indexterm><primary>tokenizer.Tokenizer</primary><secondary>get_tokens</secondary></indexterm>
+<para><computeroutput> list tokenizer.Tokenizer.get_tokens ( self,  text)</computeroutput></para><para>
+Definition at line <link linkend="_tokenizer_8py_source_1l00019">19</link> of file <link linkend="_tokenizer_8py_source">tokenizer.py</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+scanner/<link linkend="_tokenizer_8py">tokenizer.py</link></section>
+</section>

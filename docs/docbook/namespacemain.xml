@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacemain" xml:lang="en-US">
+<title>main Namespace Reference</title>
+<indexterm><primary>main</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacemain_1a96721b19cffcb75684862f7848d69177">t</link> = Tokenizer()</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespacemain_1ae0880af0d2974f53498995895e5e2402">text</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacemain_1a96721b19cffcb75684862f7848d69177"/><section>
+    <title>t</title>
+<indexterm><primary>t</primary><secondary>main</secondary></indexterm>
+<indexterm><primary>main</primary><secondary>t</secondary></indexterm>
+<para><computeroutput>main.t = Tokenizer()</computeroutput></para><para>
+Definition at line <link linkend="_main_8py_source_1l00005">5</link> of file <link linkend="_main_8py_source">main.py</link>.</para>
+</section>
+<anchor xml:id="_namespacemain_1ae0880af0d2974f53498995895e5e2402"/><section>
+    <title>text</title>
+<indexterm><primary>text</primary><secondary>main</secondary></indexterm>
+<indexterm><primary>main</primary><secondary>text</secondary></indexterm>
+<para><computeroutput>string main.text</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">00001 =&#32;&#32;<emphasis role="stringliteral">&apos;This&#32;is&#32;a&#32;test&#32;designed&#32;to&#32;verify&#32;the&#32;behaviour\</emphasis>
+00002 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;of&#32;the&#32;tokenizer.&#32;If&#32;it&#32;succeeds,&#32;we&#32;will&#32;move&#32;to&#32;the&#32;design&#32;of&#32;a&#32;file&#32;scanner.&apos;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="_main_8py_source_1l00006">6</link> of file <link linkend="_main_8py_source">main.py</link>.</para>
+</section>
+</section>
+</section>

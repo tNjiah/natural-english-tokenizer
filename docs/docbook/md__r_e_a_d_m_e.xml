@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__r_e_a_d_m_e" xml:lang="en-US">
+
+<para>NET (Natural English Tokenizer) is a tool that helps in scanning and parsing text written in natural english in order to prepare them for spell-cheking and grammar checking.</para>
+<section xml:id="_md__r_e_a_d_m_e_1autotoc_md1">
+<title>Wed Nov 27 18:30 modified the tokenizer as a class</title>
+
+<para><itemizedlist>
+<listitem>
+<para>created scanner module</para>
+</listitem><listitem>
+<para>created tokenizer class in order to allow use of tokenizer objects</para>
+</listitem><listitem>
+<para>created <link linkend="_main_8py">main.py</link> as driver code</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__r_e_a_d_m_e_1autotoc_md2">
+<title>Wed Nov 19 16:00 initialized the tokenizer repository</title>
+
+<para><itemizedlist>
+<listitem>
+<para>created default <link linkend="_statement_8py">statement.py</link></para>
+</listitem><listitem>
+<para>created readme file</para>
+</listitem></itemizedlist>
+</para>
+
+<para>### Member of the group 7 G<itemizedlist>
+<listitem>
+<para>DIKUBA KINDJEL ALICIA ASHLEY </para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
